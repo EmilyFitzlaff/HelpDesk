@@ -185,3 +185,17 @@ CHANGE COLUMN `nome` `descricao` VARCHAR(255) NOT NULL ;
 
 ALTER TABLE `helpdesk`.`usuarioprivilegio` 
 CHANGE COLUMN `nome` `descricao` VARCHAR(255) NOT NULL ;
+
+ALTER TABLE `helpdesk`.`modulo` 
+CHANGE COLUMN `cadastro` `dataCadastro` DATETIME NULL DEFAULT NULL ;
+
+ALTER TABLE `helpdesk`.`modulo` 
+DROP FOREIGN KEY `modulo_responsavel_id`;
+ALTER TABLE `helpdesk`.`modulo` 
+CHANGE COLUMN `responsavel` `usuarioResponsavel` INT(11) NOT NULL ;
+ALTER TABLE `helpdesk`.`modulo` 
+ADD CONSTRAINT `modulo_responsavel_id`
+  FOREIGN KEY (`usuarioResponsavel`)
+  REFERENCES `helpdesk`.`usuario` (`id`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
