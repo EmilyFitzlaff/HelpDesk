@@ -7,7 +7,6 @@
         private $dataCadastro;
         private $usuarioResponsavel;
 
-        
         // getters e setters 
         public function getId() {
             return $this->id;
