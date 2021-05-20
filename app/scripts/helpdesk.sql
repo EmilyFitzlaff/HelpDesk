@@ -202,3 +202,6 @@ ADD CONSTRAINT `modulo_responsavel_id`
 
 ALTER TABLE `helpdesk`.`usuario` 
 CHANGE COLUMN `cadastro` `dataCadastro` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP() ;
+
+ALTER TABLE `helpdesk`.`chamadotramite` 
+CHANGE COLUMN `data` `dataHoraTramite` DATETIME NOT NULL ;
