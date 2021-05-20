@@ -1,18 +1,17 @@
 <?php
+
     class Table {
         protected $class;
         public $thead;
         public $tbody;
 
-        function __construct($class)
-        {
+        function __construct($class) {
             $this->class = $class;
-            $this->thead = new THead;
-            $this->tbody = new TBody;
+            $this->thead = new THead();
+            $this->tbody = new TBody();
         }
 
-        function __toString()
-        {
+        function __toString() {
             $FullText = "<table";
 
             if (!empty($this->class)) {
@@ -209,4 +208,5 @@
             return $text;
         }
     }
+
 ?>

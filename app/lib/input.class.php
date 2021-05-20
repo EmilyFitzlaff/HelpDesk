@@ -1,4 +1,5 @@
 <?php
+
     class Input {
         private $sType;
         private $sClass;
@@ -48,4 +49,5 @@
             return $txt;
         }
     }
+    
 ?>
