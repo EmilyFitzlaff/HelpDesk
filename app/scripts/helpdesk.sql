@@ -199,3 +199,6 @@ ADD CONSTRAINT `modulo_responsavel_id`
   REFERENCES `helpdesk`.`usuario` (`id`)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION;
+
+ALTER TABLE `helpdesk`.`usuario` 
+CHANGE COLUMN `cadastro` `dataCadastro` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP() ;
