@@ -14,7 +14,7 @@
         }
 
         public function __toString() {
-            $sLi = '<li class="'.$this->sClass.'">';
+            $sLi = '<li class="'.$this->sClass.'">' . "\n";
             foreach ($this->aLista as $sItemLista) {
                 $sLi .= $sItemLista;
             }

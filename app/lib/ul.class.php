@@ -14,7 +14,7 @@
         }
 
         public function __toString() {
-            $sUl = '<ul class="'.$this->sClass.'">';
+            $sUl = '<ul class="'.$this->sClass.'">' . "\n";
             foreach ($this->aLista as $sItemLista) {
                 $sUl .= $sItemLista;
             }

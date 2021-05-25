@@ -1,6 +1,6 @@
 <?php
 
-    class Link {
+    class link {
 
         private $href;
         private $text;
@@ -25,7 +25,7 @@
                 $link .= " target='{$this->target}'";
             }
 
-            $link .= ">{$this->text}</a>";
+            $link .= ">{$this->text}</a>\n";
             return $link;
         }
     }
