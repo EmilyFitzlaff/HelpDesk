@@ -1,6 +1,6 @@
 <?php
 
-    class Meta {        
+    class Lib_Meta {        
         private $charset;
         private $httpEquiv;
         private $content;

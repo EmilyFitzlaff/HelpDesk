@@ -1,6 +1,6 @@
 <?php
 
-    class video {
+    class Lib_video {
         private $width;
         private $height;
         

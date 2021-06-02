@@ -1,6 +1,6 @@
 <?php
 
-    class Div {
+    class Lib_Div {
         
         private $class;
         private $aListElement = array();

@@ -1,6 +1,6 @@
 <?php
 
-    class link {
+    class Lib_Link {
 
         private $href;
         private $text;

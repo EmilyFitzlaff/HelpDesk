@@ -1,6 +1,6 @@
 <?php
 
-    class Usuario {
+    class Model_Usuario {
         private $id;
         private $apelido;
         private $email;
@@ -8,7 +8,7 @@
         private $dataCadastro;
 
         /**
-         * @var UsuarioPrivilegio usuarioPrivilegio.model.php
+         * @var Model_UsuarioPrivilegio usuarioPrivilegio.model.php
          */
         private $Privilegio;
 
@@ -57,7 +57,7 @@
             return $this->Privilegio;
         }
 
-        public function setPrivilegio(UsuarioPrivilegio $Privilegio) {
+        public function setPrivilegio(Model_UsuarioPrivilegio $Privilegio) {
             $this->Privilegio = $Privilegio;
         }
 

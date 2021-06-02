@@ -1,6 +1,6 @@
 <?php
 
-    class Li {
+    class Lib_Li {
 
         private $sClass;
         private $aLista = array();

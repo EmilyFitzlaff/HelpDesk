@@ -1,6 +1,6 @@
 <?php
 
-    class Form {
+    class Lib_Form {
 
         private $aLista = array();
         private $sAction;

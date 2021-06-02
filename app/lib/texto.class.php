@@ -1,6 +1,6 @@
 <?php
 
-    class Texto {
+    class Lib_Texto {
         
         private $text;
 

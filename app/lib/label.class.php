@@ -1,6 +1,6 @@
 <?php
 
-    class Label {
+    class Lib_Label {
 
         private $texto;
         private $for;

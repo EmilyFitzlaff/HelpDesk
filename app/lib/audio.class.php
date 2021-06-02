@@ -1,6 +1,6 @@
 <?php
 
-class audio {
+class Lib_Audio {
     
     private $sources   = [];
     private $atributos = [];

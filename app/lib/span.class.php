@@ -1,8 +1,8 @@
 <?php
 
-    class Span {
+    class Lib_Span {
         
-        private $span;
+        private $span = [];
         private $styleCompleto;
         private $arrayStyle = [];
         

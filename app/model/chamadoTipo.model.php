@@ -1,6 +1,6 @@
 <?php
 
-    class ChamadoTipo {
+    class Model_ChamadoTipo {
         private $id;
         private $descricao;
         private $observacao;

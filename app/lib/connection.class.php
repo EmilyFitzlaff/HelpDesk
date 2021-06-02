@@ -1,6 +1,6 @@
 <?php
 
-    class Conexao {
+    class Lib_Conexao {
 
         private $username = 'root';
         private $password = '';

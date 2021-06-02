@@ -5,32 +5,32 @@
 
     require_once('autoload.class.php');
 
-    $aChamado        = new link("", "Chamados", "nav-link", "");
-    $aUsuario        = new link("", "Usuários", "nav-link", "");
-    $aChamadoTipo    = new link("", "Tipos de Chamados", "nav-link", "");
-    $aModulo         = new link("", "Módulos", "nav-link", "");
-    $aSituacao       = new link("", "Tipos de Situações", "nav-link", "");
-    $aTipoPrivilegio = new link("", "Tipos de Privilégios", "nav-link", "");
+    $aChamado        = new Lib_Link("", "Chamados", "nav-link", "");
+    $aUsuario        = new Lib_Link("", "Usuários", "nav-link", "");
+    $aChamadoTipo    = new Lib_Link("", "Tipos de Chamados", "nav-link", "");
+    $aModulo         = new Lib_Link("", "Módulos", "nav-link", "");
+    $aSituacao       = new Lib_Link("", "Tipos de Situações", "nav-link", "");
+    $aTipoPrivilegio = new Lib_Link("", "Tipos de Privilégios", "nav-link", "");
 
-    $liModulo = new Li("", "");
+    $liModulo = new Lib_Li("", "");
     $liModulo->addElement($aModulo);
 
-    $liChamadoTipo = new Li("", "");
+    $liChamadoTipo = new Lib_Li("", "");
     $liChamadoTipo->addElement($aChamadoTipo);
 
-    $liSituacao = new Li("", "");
+    $liSituacao = new Lib_Li("", "");
     $liSituacao->addElement($aSituacao);
 
-    $liTipoPrivilegio = new Li("", "");
+    $liTipoPrivilegio = new Lib_Li("", "");
     $liTipoPrivilegio->addElement($aTipoPrivilegio);
  
-    $liChamado = new Li("nav-item");
+    $liChamado = new Lib_Li("nav-item");
     $liChamado->addElement($aChamado);
     
-    $liUsuario = new Li("nav-item");
+    $liUsuario = new Lib_Li("nav-item");
     $liUsuario->addElement($aUsuario);
 
-    $ulMenu = new Ul("navbar-nav");
+    $ulMenu = new Lib_Ul("navbar-nav");
     $ulMenu->addElement($liChamado);
     $ulMenu->addElement($liUsuario);
     $ulMenu->addElement($liModulo);
@@ -38,16 +38,16 @@
     $ulMenu->addElement($liSituacao);
     $ulMenu->addElement($liTipoPrivilegio);
 
-    $divCollapse = new Div("collapse navbar-collapse", "navbarNavDropdown");
+    $divCollapse = new Lib_Div("collapse navbar-collapse", "navbarNavDropdown");
     $divCollapse->addElement($ulMenu);
 
-    $aTitle = new link("#", "HELPDESK", "navbar-brand", "");
+    $aTitle = new Lib_Link("#", "HELPDESK", "navbar-brand", "");
 
-    $divContainerFluid = new Div("container-fluid", "");
+    $divContainerFluid = new Lib_Div("container-fluid", "");
     $divContainerFluid->addElement($aTitle);
     $divContainerFluid->addElement($divCollapse);
 
-    $navbar = new Nav("navbar navbar-expand-lg navbar-light bg-light", "");
+    $navbar = new Lib_Nav("navbar navbar-expand-lg navbar-light bg-light", "");
     $navbar->addElement($divContainerFluid);
 
     echo $navbar;

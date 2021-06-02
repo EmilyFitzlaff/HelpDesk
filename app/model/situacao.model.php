@@ -1,6 +1,6 @@
 <?php
 
-    class Situacao {
+    class Model_Situacao {
         protected $id;
         protected $descricao;
         protected $ehChamado;

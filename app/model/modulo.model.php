@@ -1,6 +1,6 @@
 <?php
 
-    class Modulo {
+    class Model_Modulo {
         private $id;
         private $descricao;
         private $sigla;
