@@ -1,5 +1,5 @@
 <?php
-    class Css {
+    class Lib_Css {
 
         private $url;
         private $rel;

@@ -1,7 +1,32 @@
 <?php
-    spl_autoload_register(function($className) {
-        $file = $_SERVER["DOCUMENT_ROOT"].'/app/library' . $className . '.class.php';
+    function tryInclude($class = null, $classType = null)
+    {
+        $fliename = str_replace('_', DIRECTORY_SEPARATOR, strtolower($class)). '.' . $classType .'.php';
+        $file = $_SERVER["DOCUMENT_ROOT"].'/HelpDesk/app/'.$fliename;
+
         if (file_exists($file)) {
-            require_once $file;
+            include($file);
+            return true;
         }
-    });
+
+        return false;
+    }
+
+    function autoload($class)
+    {
+        if (tryInclude($class, 'controller')) {
+            return;
+        }
+        if (tryInclude($class, 'class')) {
+            return;
+        }
+        if (tryInclude($class, 'model')) {
+            return;
+        }
+        if (tryInclude($class, 'view')) {
+            return;
+        }
+    }
+    
+    spl_autoload_register('autoload');
+?>

@@ -1,14 +1,14 @@
 <?php
 
-    class Table {
+    class Lib_Table {
         protected $class;
         public $thead;
         public $tbody;
 
         function __construct($class) {
             $this->class = $class;
-            $this->thead = new THead();
-            $this->tbody = new TBody();
+            $this->thead = new Lib_THead();
+            $this->tbody = new Lib_TBody();
         }
 
         function __toString() {
@@ -28,7 +28,7 @@
         }
     }
 
-    class THead {
+    class Lib_THead {
         protected $Tr = array();
 
         function addTr($Tr) {
@@ -62,7 +62,7 @@
         }
     }
 
-    class TBody {
+    class Lib_TBody {
         protected $Tr = array();
 
         function addElement($Element = array()) {
@@ -90,7 +90,7 @@
         }
     }
 
-    class Tr {
+    class Lib_Tr {
         protected $Elem = array();
 
         function addElement($Element = array()) {
@@ -120,7 +120,7 @@
         }
     }
 
-    class Th {
+    class Lib_Th {
         protected $scope;
         protected $valor = array();
         protected $style;
@@ -170,7 +170,7 @@
         }
     }
 
-    class Td {
+    class Lib_Td {
         protected $valor = array();
         protected $colspan;
 

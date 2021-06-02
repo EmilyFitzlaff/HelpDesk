@@ -1,6 +1,6 @@
 <?php
 
-    class Script {
+    class Lib_Script {
 
         private $aList = array();
         private $type;

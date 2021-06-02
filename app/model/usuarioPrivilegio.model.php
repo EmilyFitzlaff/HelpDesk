@@ -1,6 +1,6 @@
 <?php
 
-    class UsuarioPrivilegio {
+    class Model_UsuarioPrivilegio {
         private $id;
         private $descricao;
 

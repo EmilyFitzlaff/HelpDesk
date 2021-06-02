@@ -1,6 +1,6 @@
 <?php
 
-    class Input {
+    class Lib_Input {
         private $sType;
         private $sClass;
         private $sId;

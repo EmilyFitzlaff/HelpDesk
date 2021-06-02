@@ -1,5 +1,4 @@
 <?php 
-
     class View_ChamadoTipo {
         /**
          * função para montar a consulta dos Tipos de Chamados cadastrados no banco de dados
@@ -29,5 +28,4 @@
             ';
         }
     }
-    
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-    class Html{
+    class Lib_Html{
     
         private $lang;
         private $head;

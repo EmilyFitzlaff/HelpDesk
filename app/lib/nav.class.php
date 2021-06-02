@@ -1,6 +1,6 @@
 <?php
 
-    class Nav {
+    class Lib_Nav {
         private $aList = array();
         private $class;
         private $id;

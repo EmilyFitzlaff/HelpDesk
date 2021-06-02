@@ -1,6 +1,6 @@
 <?php
 
-    class Body {
+    class Lib_Body {
 
         private $class;
         private $aListElement = array();

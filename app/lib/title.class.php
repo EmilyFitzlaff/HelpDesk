@@ -1,6 +1,6 @@
 <?php
 
-    class Title {
+    class Lib_Title {
         
         private $text;
 

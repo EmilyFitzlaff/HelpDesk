@@ -1,21 +1,20 @@
 <?php
-
-    class Chamado {
+    class Model_Chamado {
         protected $id;
         protected $abertura;
         /**
-         * @var Usuario usuario.model.php
+         * @var Model_Usuario usuario.model.php
          */        
         protected $usuario;
         protected $descricao;
         protected $encerramento;
         protected $observacao;
         /**
-         * @var Usuario usuario.model.php
+         * @var Model_Usuario usuario.model.php
          */        
         protected $responsavel;
         /**
-         * @var Modulo modulo.model.php
+         * @var Model_Modulo modulo.model.php
          */        
         protected $modulo;
         
@@ -40,7 +39,7 @@
             return $this->usuario;
         }
         
-        public function setUsuario(Usuario $usuario) {
+        public function setUsuario(Model_Usuario $usuario) {
             $this->usuario = $usuario;
         }
 
@@ -72,7 +71,7 @@
             return $this->responsavel;
         }
         
-        public function setResponsavel(Usuario $responsavel) {
+        public function setResponsavel(Model_Usuario $responsavel) {
             $this->responsavel = $responsavel;
         }
 
@@ -80,7 +79,7 @@
             return $this->modulo;
         }
         
-        public function setModulo(Modulo $modulo) {
+        public function setModulo(Model_Modulo $modulo) {
             $this->modulo = $modulo;
         }
     }

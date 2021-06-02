@@ -1,24 +1,24 @@
 <?php
 
-    class ChamadoTramite {
+    class Model_ChamadoTramite {
         private $id;
         
         /**
-         * @var Chamado chamado.model.php
+         * @var Model_Chamado chamado.model.php
          */
 
         private $Chamado;
         private $descricao;
         
         /**
-         * @var Usuario usuario.model.php
+         * @var Model_Usuario usuario.model.php
          */
         private $Usuario;
 
         private $dataHoraTramite;
 
          /**
-         * @var Usuario usuario.model.php
+         * @var Model_Usuario usuario.model.php
          */
         private $Destinatario;
 
@@ -43,7 +43,7 @@
             return $this->Chamado;
         }
 
-        public function setChamado(Chamado $Chamado) {
+        public function setChamado(Model_Chamado $Chamado) {
             $this->Chamado = $Chamado;
         }
 
@@ -51,7 +51,7 @@
             return $this->Usuario;
         }
 
-        public function setUsuario(Usuario $Usuario) {
+        public function setUsuario(Model_Usuario $Usuario) {
             $this->Usuario = $Usuario;
         }
 
@@ -67,7 +67,7 @@
             return $this->Destinatario;
         }
 
-        public function setDestinatario(Usuario $Destinatario) {
+        public function setDestinatario(Model_Usuario $Destinatario) {
             $this->Destinatario = $Destinatario;
         }
 

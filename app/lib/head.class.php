@@ -1,6 +1,6 @@
 <?php
 
-    class Head {
+    class Lib_Head {
         
         private $aListElement = array();
         

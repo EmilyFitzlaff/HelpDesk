@@ -1,5 +1,5 @@
 <?php
-    class Button {
+    class Lib_Button {
         private $sType;
         private $sClass;
         private $sId;
