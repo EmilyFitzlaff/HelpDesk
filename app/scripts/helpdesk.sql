@@ -205,3 +205,6 @@ CHANGE COLUMN `cadastro` `dataCadastro` DATETIME NOT NULL DEFAULT CURRENT_TIMEST
 
 ALTER TABLE `helpdesk`.`chamadotramite` 
 CHANGE COLUMN `data` `dataHoraTramite` DATETIME NOT NULL ;
+
+ALTER TABLE `helpdesk`.`chamadotipo` 
+CHANGE COLUMN `cadastro` `dataCadastro` DATETIME NOT NULL ;
