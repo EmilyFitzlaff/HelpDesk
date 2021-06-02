@@ -1,8 +1,8 @@
 <?php
     function tryInclude($class = null, $classType = null)
     {
-        $fliename = str_replace('_', DIRECTORY_SEPARATOR, strtolower($class)). '.' . $classType .'.php';
-        $file = $_SERVER["DOCUMENT_ROOT"].'/HelpDesk/app/'.$fliename;
+        $filename = str_replace('_', DIRECTORY_SEPARATOR, strtolower($class)). '.' . $classType .'.php';
+        $file = $_SERVER["DOCUMENT_ROOT"].'/HelpDesk/app/'.$filename;
 
         if (file_exists($file)) {
             include($file);
