@@ -13,7 +13,7 @@
                         <li><a class="dropdown-item" href="#">Módulos</a></li>
                         <li><a class="dropdown-item" href="#">Situação</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Privilégio</a></li>
+                        <li><a class="dropdown-item" href="#">Privilégios</a></li>
                         <li><a class="dropdown-item" href="#">Usuários</a></li>
                     </ul>
                 </li>
