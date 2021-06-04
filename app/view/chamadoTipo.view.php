@@ -19,11 +19,11 @@
             <div class="container">
                 <?php
                     if(empty($aDados)) {
-                        echo "<div class='alert alert-secondary'><p>Não há dados para exibição!</p></div>";
+                        echo setVazio();
                     } else {
                 ?>
                 <p class="lead mt-5">
-                    echo $title;
+                    <?php echo $title; ?>
                 </p>
                 <table class="table table-bordered table-striped table-hover">
                     <thead class="table-dark">

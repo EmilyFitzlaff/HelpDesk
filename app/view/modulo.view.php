@@ -19,7 +19,7 @@
             <div class="container">
                 <?php
                     if(empty($aDados)) {
-                        echo "<div class='alert alert-secondary'><p>Não há dados para exibição!</p></div>";
+                        echo setVazio();
                     } else {
                 ?>
                 <p class="lead mt-5">
