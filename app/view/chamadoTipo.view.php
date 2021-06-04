@@ -3,7 +3,7 @@
         <?php
             $title = "Consulta Tipos de Chamados";
 
-            require_once('autoload.php');
+            require_once('../autoload.php');
             require_once('head.php');
         ?>
     </head>
@@ -11,8 +11,17 @@
         <div class='container-fluid'>
             <?php
                 require_once('menu.php');
+
+                $chamadoTipo = new Controller_ChamadoTipo();
+
+                $aDados = $chamadoTipo->returnSelectAll();
             ?>
             <div class="container">
+                <?php
+                    if(empty($aDados)) {
+                        echo "<div class='alert alert-secondary'><p>Não há dados para exibição!</p></div>";
+                    } else {
+                ?>
                 <p class="lead mt-5">
                     Consultar Tipos de Chamados
                 </p>
@@ -27,16 +36,19 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <?php foreach ($aDados as $oObjeto) { ?>
                         <tr>
-                            <td>1</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                            <td><?php echo $oObjeto->getId(); ?></td>
+                            <td><?php echo $oObjeto->getDescricao(); ?></td>
+                            <td><?php echo $oObjeto->getObservacao(); ?></td>
+                            <td><?php echo $oObjeto->getDataCadastro(); ?></td>
                             <td>Alterar | Excluir </td>
                         </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
             </div>
+            <?php } ?>
         </div>
     </body>
 </html>

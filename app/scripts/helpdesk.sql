@@ -24,8 +24,8 @@ USE `helpdesk` ;
 -- Table `helpdesk`.`usuarioprivilegio`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `helpdesk`.`usuarioprivilegio` (
-  `id` INT(11) NOT NULL,
-  `nome` VARCHAR(255) NOT NULL,
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `descricao` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
@@ -35,11 +35,11 @@ DEFAULT CHARACTER SET = latin1;
 -- Table `helpdesk`.`usuario`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `helpdesk`.`usuario` (
-  `id` INT(11) NOT NULL,
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
   `apelido` VARCHAR(16) NOT NULL,
   `email` VARCHAR(255) NOT NULL,
   `senha` VARCHAR(32) NOT NULL,
-  `cadastro` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `dataCadastro` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `privilegio` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `apelido_UNIQUE` (`apelido` ASC) ,
@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `helpdesk`.`modulo` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(255) NOT NULL,
   `sigla` CHAR(3) NOT NULL,
-  `cadastro` DATETIME NULL DEFAULT NULL,
+  `dataCadastro` DATETIME NULL DEFAULT NULL,
   `responsavel` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `modulo_responsavel_id_idx` (`responsavel` ASC) ,
@@ -78,10 +78,10 @@ DEFAULT CHARACTER SET = latin1;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `helpdesk`.`chamado` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `abertura` DATETIME NOT NULL,
+  `dataAbertura` DATETIME NOT NULL,
   `usuario` INT(11) NOT NULL,
   `descricao` VARCHAR(200) NULL DEFAULT NULL,
-  `encerramento` DATETIME NULL DEFAULT NULL,
+  `dataEncerramento` DATETIME NULL DEFAULT NULL,
   `observacao` TEXT NULL DEFAULT NULL,
   `responsavel` INT(11) NOT NULL,
   `modulo` INT(11) NOT NULL,
@@ -112,8 +112,8 @@ DEFAULT CHARACTER SET = latin1;
 -- Table `helpdesk`.`chamadotipo`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `helpdesk`.`chamadotipo` (
-  `id` INT(11) NOT NULL,
-  `nome` VARCHAR(255) NOT NULL,
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `descricao` VARCHAR(255) NOT NULL,
   `observacao` TEXT NULL DEFAULT NULL,
   `cadastro` DATETIME NOT NULL,
   PRIMARY KEY (`id`))
@@ -125,7 +125,7 @@ DEFAULT CHARACTER SET = latin1;
 -- Table `helpdesk`.`chamadotramite`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `helpdesk`.`chamadotramite` (
-  `id` INT(11) NOT NULL,
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
   `chamado` INT(11) NOT NULL,
   `descricao` VARCHAR(300) NOT NULL,
   `usuario` INT(11) NOT NULL,
@@ -159,7 +159,7 @@ DEFAULT CHARACTER SET = latin1;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `helpdesk`.`situacao` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(255) NOT NULL,
+  `descricao` VARCHAR(255) NOT NULL,
   `ehchamado` TINYINT(4) NOT NULL DEFAULT '0',
   `ehchamadotipo` TINYINT(4) NOT NULL DEFAULT '0',
   `ehmodulo` TINYINT(4) NOT NULL DEFAULT '0',
@@ -208,3 +208,6 @@ CHANGE COLUMN `data` `dataHoraTramite` DATETIME NOT NULL ;
 
 ALTER TABLE `helpdesk`.`chamadotipo` 
 CHANGE COLUMN `cadastro` `dataCadastro` DATETIME NOT NULL ;
+
+ALTER TABLE `helpdesk`.`chamadotipo` 
+CHANGE COLUMN `id` `id` INT(11) NOT NULL AUTO_INCREMENT ;

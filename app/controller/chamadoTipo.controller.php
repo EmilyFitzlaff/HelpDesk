@@ -1,33 +1,36 @@
 <?php
 
-    require('../autoload.php');
     require('connection.controller.php');
 
     class Controller_ChamadoTipo {
-        public function SelectAll() {
+        private function SelectAll() {
             $conexao = new Conexao();
             
             $SQL = "select * from chamadotipo";
             
             $dadosBD = $conexao->getSelect($SQL);
-            echo "<pre>";
-           
-            var_dump($dadosBD);
             
-            echo "</pre>";
+            $c = 0;
 
-            while($dadosBD) {
+            $i = count($dadosBD);
+
+            $aResultado = [];
+            
+            while($c < $i) {
                 $oChamadoTipo = new Model_ChamadoTipo();
-                $oChamadoTipo->setId('id');
-                $oChamadoTipo->setDescricao($dadosBD['descricao']);
-                $oChamadoTipo->setObservacao($dadosBD['observacao']);
-                $oChamadoTipo->setDataCadastro($dadosBD['dataCadastro']);
+                $oChamadoTipo->setId($dadosBD[$c][0]);
+                $oChamadoTipo->setDescricao($dadosBD[$c][1]);
+                $oChamadoTipo->setObservacao($dadosBD[$c][2]);
+                $oChamadoTipo->setDataCadastro($dadosBD[$c][3]);
                 $aResultado[] = $oChamadoTipo; 
-            }
-            return $aResultado;             
+                $c++;
+            } 
+            return $aResultado;                
+        }
+
+        public function returnSelectAll() {
+            $aDados = $this->SelectAll();
+            return $aDados;
         }
     }
-
-    $conexao = new Controller_ChamadoTipo();
-    $conexao->SelectAll();
 ?>
