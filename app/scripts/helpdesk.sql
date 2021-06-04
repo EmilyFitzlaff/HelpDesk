@@ -211,3 +211,9 @@ CHANGE COLUMN `cadastro` `dataCadastro` DATETIME NOT NULL ;
 
 ALTER TABLE `helpdesk`.`chamadotipo` 
 CHANGE COLUMN `id` `id` INT(11) NOT NULL AUTO_INCREMENT ;
+
+insert into chamadoTipo (descricao, observacao, cadastro) values
+("Inconformidade de Software", "", '2021-06-01'),
+("Sugestão de Desenvolvimento", "", '2021-06-01'),
+("Duvida e Consultoria", "", '2021-06-01'),
+("Customização", "", '2021-06-01');

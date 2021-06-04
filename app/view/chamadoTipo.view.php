@@ -23,10 +23,10 @@
                     } else {
                 ?>
                 <p class="lead mt-5">
-                    Consultar Tipos de Chamados
+                    echo $title;
                 </p>
-                <table class="table table-bordered">
-                    <thead>
+                <table class="table table-bordered table-striped table-hover">
+                    <thead class="table-dark">
                         <tr>
                             <th scope="col">Código</th>
                             <th scope="col">Descrição</th>

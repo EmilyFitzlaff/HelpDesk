@@ -40,7 +40,7 @@
             $this->dataCadastro = $dataCadastro;
         }
 
-        public function getUsuario() {
+        public function getUsuarioResponsavel() {
             return $this->usuarioResponsavel;
         }
         
