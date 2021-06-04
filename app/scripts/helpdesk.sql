@@ -217,3 +217,5 @@ insert into chamadoTipo (descricao, observacao, cadastro) values
 ("Sugestão de Desenvolvimento", "", '2021-06-01'),
 ("Duvida e Consultoria", "", '2021-06-01'),
 ("Customização", "", '2021-06-01');
+
+INSERT INTO `helpdesk`.`situacao` (`descricao`, `ehchamado`, `ehchamadotipo`, `ehmodulo`, `ehusuario`, `ehusuarioprivilegio`) VALUES ('Cancelado', '1', '0', '0', '0', '0');

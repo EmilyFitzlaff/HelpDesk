@@ -11,10 +11,10 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                         <li><a class="dropdown-item" href="chamadoTipo.view.php">Tipos Chamados</a></li>
                         <li><a class="dropdown-item" href="modulo.view.php">Módulos</a></li>
-                        <li><a class="dropdown-item" href="#">Situação</a></li>
+                        <li><a class="dropdown-item" href="situacao.view.php">Situações</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Privilégios</a></li>
-                        <li><a class="dropdown-item" href="#">Usuários</a></li>
+                        <li><a class="dropdown-item" href="usuarioPrivilegio.view.php">Privilégios</a></li>
+                        <li><a class="dropdown-item" href="usuario.view.php">Usuários</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
