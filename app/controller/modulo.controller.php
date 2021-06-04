@@ -3,11 +3,10 @@
     require('connection.controller.php');
 
     class Controller_Modulo {
+
         private function SelectAll() {
-            $conexao = new Conexao();
-            
-            $SQL = "select * from modulo";
-            
+            $conexao = new Conexao();            
+            $SQL = "select * from modulo";            
             $dadosBD = $conexao->getSelect($SQL);
             
             $c = 0;

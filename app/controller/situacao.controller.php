@@ -4,10 +4,8 @@
 
     class Controller_Situacao {
         private function SelectAll() {
-            $conexao = new Conexao();
-            
-            $SQL = "select * from situacao";
-            
+            $conexao = new Conexao();            
+            $SQL = "select * from situacao";            
             $dadosBD = $conexao->getSelect($SQL);
             
             $c = 0;

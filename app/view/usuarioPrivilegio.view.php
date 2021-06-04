@@ -1,29 +1,48 @@
-<?php 
+<!DOCTYPE html>
+    <head>
+        <?php
+            $title = "Consulta Privilégios";
 
-    class View_UsuarioPrivilegio {
-        /**
-         * função para montar a consulta dos Tipos de Privilégios cadastrados no banco de dados
-         */
-        public function montaConsulta() {
-            echo '
-                <table class="table table-bordered">
-                    <thead>
+            require_once('../autoload.php');
+            require_once('head.php');
+        ?>
+    </head>
+    <body>
+        <div class='container-fluid'>
+            <?php
+                require_once('menu.php');
+
+                $privilegio = new Controller_UsuarioPrivilegio();
+
+                $aDados = $privilegio->returnSelectAll();
+            ?>
+            <div class="container">
+                <?php
+                    if(empty($aDados)) {
+                        echo setVazio();
+                    } else {
+                ?>
+                <p class="lead mt-5">
+                    <?php echo $title; ?>
+                </p>
+                <table class="table table-bordered table-striped table-hover">
+                    <thead class="table-dark">
                         <tr>
                             <th scope="col">Código</th>
                             <th scope="col">Descrição</th>
-                            <th scope="col">Ações Disponíves</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <?php foreach ($aDados as $oObjeto) { ?>
                         <tr>
-                            <td>1</td>
-                            <td>Mark</td>
-                            <td>Alterar | Excluir </td>
+                            <td><?php echo $oObjeto->getId(); ?></td>
+                            <td><?php echo $oObjeto->getDescricao(); ?></td>
                         </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
-            ';
-        }
-    }
-    
-?>
+            </div>
+            <?php } ?>
+        </div>
+    </body>
+</html>

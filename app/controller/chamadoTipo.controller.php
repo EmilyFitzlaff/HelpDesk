@@ -3,11 +3,10 @@
     require('connection.controller.php');
 
     class Controller_ChamadoTipo {
-        private function SelectAll() {
-            $conexao = new Conexao();
-            
-            $SQL = "select * from chamadotipo";
-            
+
+        private function SelectAll() {            
+            $conexao = new Conexao();            
+            $SQL = "select * from chamadotipo";            
             $dadosBD = $conexao->getSelect($SQL);
             
             $c = 0;

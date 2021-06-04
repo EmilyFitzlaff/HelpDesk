@@ -219,3 +219,8 @@ insert into chamadoTipo (descricao, observacao, cadastro) values
 ("Customização", "", '2021-06-01');
 
 INSERT INTO `helpdesk`.`situacao` (`descricao`, `ehchamado`, `ehchamadotipo`, `ehmodulo`, `ehusuario`, `ehusuarioprivilegio`) VALUES ('Cancelado', '1', '0', '0', '0', '0');
+
+INSERT INTO `helpdesk`.`usuarioprivilegio` (`descricao`) VALUES ('Normal');
+INSERT INTO `helpdesk`.`usuarioprivilegio` (`descricao`) VALUES ('Externo');
+INSERT INTO `helpdesk`.`usuarioprivilegio` (`descricao`) VALUES ('Administrador');
+INSERT INTO `helpdesk`.`usuarioprivilegio` (`descricao`) VALUES ('Master');
