@@ -1,11 +1,18 @@
-<?php 
+<!DOCTYPE html>
+    <head>
+        <?php
+            $title = "Consulta de Chamados";
 
-    class View_Chamado {
-        /**
-         * função para montar a tabela de consulta dos Chamados cadastrados no banco de dados
-         */
-        public function montaConsulta() {
-            echo '
+            require_once('autoload.php');
+            require_once('head.php');
+        ?>
+    </head>
+    <body>
+        <div class='container-fluid'>
+            <?php
+                require_once('menu.php');
+            ?>
+            <div class="container">
                 <table class="table table-bordered">
                     <thead>
                         <tr>
@@ -26,8 +33,7 @@
                         </tr>
                     </tbody>
                 </table>
-            ';
-        }
-    }
-    
-?>
+            </div>
+        </div>
+    </body>
+</html>

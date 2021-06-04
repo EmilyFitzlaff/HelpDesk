@@ -1,7 +1,7 @@
 <!DOCTYPE html>
     <head>
         <?php
-            $title = "Página Principal";
+            $title = "Página Inicial";
 
             require_once('autoload.php');
             require_once('head.php');
@@ -12,7 +12,6 @@
             <?php
                 require_once('menu.php');
             ?>
-            <p>Página de login<p>
         </div>
     </body>
 </html>
