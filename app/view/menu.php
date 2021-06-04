@@ -9,7 +9,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Cadastros</a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item" href="#">Tipos Chamados</a></li>
+                        <li><a class="dropdown-item" href="chamadoTipo.view.php">Tipos Chamados</a></li>
                         <li><a class="dropdown-item" href="#">Módulos</a></li>
                         <li><a class="dropdown-item" href="#">Situação</a></li>
                         <li><hr class="dropdown-divider"></li>

@@ -1,6 +1,6 @@
 <?php
 
-    class Lib_Conexao {
+    class Conexao extends PDO {
 
         private $username = 'root';
         private $password = '';
@@ -10,7 +10,10 @@
 
         public function __construct() {
             try {
-                $conn = new PDO("mysql:host={$this->host};dbname={$this->banco}", $this->username, $this->password);
+                $conn = new PDO("mysql:host={$this->host};
+                                       dbname={$this->banco}", 
+                                       $this->username, 
+                                       $this->password);
                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                 return $this->conn = $conn;

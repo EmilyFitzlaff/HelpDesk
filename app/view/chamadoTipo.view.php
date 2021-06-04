@@ -1,10 +1,21 @@
-<?php 
-    class View_ChamadoTipo {
-        /**
-         * função para montar a consulta dos Tipos de Chamados cadastrados no banco de dados
-         */
-        public function montaConsulta() {
-            echo '
+<!DOCTYPE html>
+    <head>
+        <?php
+            $title = "Consulta Tipos de Chamados";
+
+            require_once('autoload.php');
+            require_once('head.php');
+        ?>
+    </head>
+    <body>
+        <div class='container-fluid'>
+            <?php
+                require_once('menu.php');
+            ?>
+            <div class="container">
+                <p class="lead mt-5">
+                    Consultar Tipos de Chamados
+                </p>
                 <table class="table table-bordered">
                     <thead>
                         <tr>
@@ -25,7 +36,7 @@
                         </tr>
                     </tbody>
                 </table>
-            ';
-        }
-    }
-?>
+            </div>
+        </div>
+    </body>
+</html>
