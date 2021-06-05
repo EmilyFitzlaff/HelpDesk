@@ -17,14 +17,14 @@
                 $aDados = $chamadoTipo->returnSelectAll();
             ?>
             <div class="container">
+                <p class="lead mt-5">
+                    <?php echo $title; ?>
+                </p>
                 <?php
                     if(empty($aDados)) {
                         echo setVazio();
                     } else {
                 ?>
-                <p class="lead mt-5">
-                    <?php echo $title; ?>
-                </p>
                 <table class="table table-bordered table-striped table-hover">
                     <thead class="table-dark">
                         <tr>
@@ -48,7 +48,10 @@
                     </tbody>
                 </table>
             </div>
-            <?php } ?>
+            <?php } 
+            
+                include_once('footer.php');
+            ?>            
         </div>
     </body>
 </html>
