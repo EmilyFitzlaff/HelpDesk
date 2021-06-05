@@ -5,7 +5,11 @@
         private $descricao;
         private $sigla;
         private $dataCadastro;
-        private $usuarioResponsavel;
+
+        /**
+         * @var Model_Usuario usuario.model.php
+         */
+        private $UsuarioResponsavel;
 
         // getters e setters 
         public function getId() {
@@ -41,11 +45,11 @@
         }
 
         public function getUsuarioResponsavel() {
-            return $this->usuarioResponsavel;
+            return $this->UsuarioResponsavel;
         }
         
-        public function setUsuarioResponsavel($usuarioResponsavel) {
-            $this->usuarioResponsavel = $usuarioResponsavel;
+        public function setUsuarioResponsavel(Model_Usuario $UsuarioResponsavel) {
+            $this->UsuarioResponsavel = $UsuarioResponsavel;
         }
     }
 

@@ -21,7 +21,12 @@
                 $oModulo->setDescricao($dadosBD[$c][1]);
                 $oModulo->setSigla($dadosBD[$c][2]);
                 $oModulo->setDataCadastro($dadosBD[$c][3]);
-                $oModulo->setUsuarioResponsavel($dadosBD[$c][4]);
+
+                $oResponsavel = new Model_Usuario();
+                $oResponsavel->setId($dadosBD[$c][4]);
+
+                $oModulo->setUsuarioResponsavel($oResponsavel);
+
                 $aResultado[] = $oModulo; 
                 $c++;
             } 

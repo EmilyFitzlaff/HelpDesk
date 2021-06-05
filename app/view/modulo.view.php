@@ -43,7 +43,7 @@
                             <td><?php echo $oObjeto->getDescricao(); ?></td>
                             <td><?php echo $oObjeto->getSigla(); ?></td>
                             <td><?php echo $oObjeto->getDataCadastro(); ?></td>
-                            <td><?php echo $oObjeto->getResponsavel(); ?></td>
+                            <td><?php echo $oObjeto->getUsuarioResponsavel()->getApelido(); ?></td>
                             <td>Alterar | Excluir </td>
                         </tr>
                         <?php } ?>
