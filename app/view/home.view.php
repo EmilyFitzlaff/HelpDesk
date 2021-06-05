@@ -3,7 +3,7 @@
         <?php
             $title = "Página Inicial";
 
-            require_once('autoload.php');
+            require_once('../autoload.php');
             require_once('head.php');
         ?>
     </head>
