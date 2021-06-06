@@ -1,12 +1,33 @@
 <?php
 
     class Model_ChamadoTipo {
+        /**
+         * @property Required
+         * @property Not Null
+         * @property Auto Increment 
+         */
         private $id;
+
+        /**
+         * @property Required
+         * @property Not Null
+         */
         private $descricao;
+
+        /**
+         * @property TEXT
+         */
         private $observacao;
+
+        /**
+         * @property Required
+         * @property Not Null
+         */
         private $dataCadastro;
         
-        // getters e setters 
+        /**
+         * Getters e Setters
+         */
         public function getId() {
             return $this->id;
         }

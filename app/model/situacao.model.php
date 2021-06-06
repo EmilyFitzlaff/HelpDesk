@@ -1,6 +1,9 @@
 <?php
 
     class Model_Situacao {
+        /**
+         * ID da Situação, campo Obrigatório, AI e Not Null
+         */
         protected $id;
         protected $descricao;
         protected $ehChamado;

@@ -6,7 +6,7 @@
 
         private function SelectAll() {
             $conexao = new Conexao();            
-            $SQL = "select * from modulo";            
+            $SQL = "select * from modulo join usuario on modulo.responsavel = usuario.id";            
             $dadosBD = $conexao->getSelect($SQL);
             
             $c = 0;
@@ -21,7 +21,7 @@
                 $oModulo->setDescricao($dadosBD[$c][1]);
                 $oModulo->setSigla($dadosBD[$c][2]);
                 $oModulo->setDataCadastro($dadosBD[$c][3]);
-
+                
                 $oResponsavel = new Model_Usuario();
                 $oResponsavel->setId($dadosBD[$c][4]);
 

@@ -1,13 +1,24 @@
 <?php
 
     class Model_ChamadoTramite {
+        /**
+         * @property Required
+         * @property Not Null
+         * @property Auto Increment
+         */
         private $id;
         
         /**
          * @var Model_Chamado chamado.model.php
+         * @property Required
+         * @property Not Null
          */
-
         private $Chamado;
+
+        /**
+         * @property Required
+         * @property Not Null
+         */
         private $descricao;
         
         /**
