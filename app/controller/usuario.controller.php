@@ -5,7 +5,7 @@
     class Controller_Usuario {
         private function SelectAll() {
             $conexao = new Conexao();            
-            $SQL = "select * from usuario";            
+            $SQL = "select * from usuario join usuarioprivilegio on usuario.id = usuarioprivilegio.id";            
             $dadosBD = $conexao->getSelect($SQL);
             
             $c = 0;
