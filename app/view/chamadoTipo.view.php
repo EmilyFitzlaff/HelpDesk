@@ -39,7 +39,6 @@
                             <th scope="col">Código</th>
                             <th scope="col">Descrição</th>
                             <th scope="col">Observação</th>
-                            <th scope="col">Data Cadastro</th>
                             <th scope="col">Ações Disponíves</th>
                         </tr>
                     </thead>
@@ -49,8 +48,7 @@
                             <td><?php echo $oObjeto->getId(); ?></td>
                             <td><?php echo $oObjeto->getDescricao(); ?></td>
                             <td><?php echo $oObjeto->getObservacao(); ?></td>
-                            <td><?php echo $oObjeto->getDataCadastro(); ?></td>
-                            <td>Alterar | Excluir </td>
+                            <td>Alterar | <a href="chamadoTipo-exclusao.view.php?acao=deletar&registro=<?php echo $oObjeto->getId()?>">Excluir</a> </td>
                         </tr>
                         <?php } ?>
                     </tbody>

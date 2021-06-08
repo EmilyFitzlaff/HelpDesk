@@ -18,12 +18,6 @@
          * @property TEXT
          */
         private $observacao;
-
-        /**
-         * @property Required
-         * @property Not Null
-         */
-        private $dataCadastro;
         
         /**
          * Getters e Setters
@@ -50,14 +44,6 @@
         
         public function setObservacao($observacao) {
             $this->observacao = $observacao;
-        }
-
-        public function getDataCadastro() {
-            return $this->dataCadastro;
-        }
-        
-        public function setDataCadastro($dataCadastro) {
-            $this->dataCadastro = $dataCadastro;
         }
     }
 ?>
