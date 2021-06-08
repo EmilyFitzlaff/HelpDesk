@@ -36,5 +36,10 @@
             $aDados = $this->SelectAll();
             return $aDados;
         }
+
+        public function MontaSelectUsuario() {
+            $aDados = $this->returnSelectAll();
+            var_dump($aDados);
+        }
     }
 ?>
