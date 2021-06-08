@@ -20,9 +20,9 @@
                     $oChamadoTipo = new Controller_ChamadoTipo();
 
                     $conexao = new Conexao();  
-                    $conexao->getSelect($SQL);       
-                    $descricao = $conexao->getSelect($getDescricao);       
+                    $conexao->getSelect($SQL);    
 
+                    $descricao = $conexao->getSelect($getDescricao); 
                 }
 
             ?>
@@ -36,10 +36,12 @@
                         <label for="descricao" required>Descrição</label>
                     </div>
                     <button type="submit" class="btn btn-danger" value="excluir" name="excluir">Excluir</button>
-                </form>            
-                
-                <?php                
+                </form>     
+
+                <?php
+
                     $oChamadoTipo->deletarTipoChamado($_GET['registro']);
+                
                 ?>
             </div> 
         </div>

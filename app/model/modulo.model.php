@@ -4,7 +4,6 @@
         private $id;
         private $descricao;
         private $sigla;
-        private $dataCadastro;
 
         /**
          * @var Model_Usuario usuario.model.php
@@ -34,14 +33,6 @@
         
         public function setSigla($sigla) {
             $this->sigla = $sigla;
-        }
-
-        public function getDataCadastro() {
-            return $this->dataCadastro;
-        }
-        
-        public function setDataCadastro($dataCadastro) {
-            $this->dataCadastro = $dataCadastro;
         }
 
         public function getUsuarioResponsavel() {

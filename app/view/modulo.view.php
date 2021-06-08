@@ -39,7 +39,6 @@
                             <th scope="col">Código</th>
                             <th scope="col">Descrição</th>
                             <th scope="col">Sigla</th>
-                            <th scope="col">Data Cadastro</th>
                             <th scope="col">Responsável</th>
                             <th scope="col">Ações Disponíves</th>
                         </tr>
@@ -50,7 +49,6 @@
                             <td><?php echo $oObjeto->getId(); ?></td>
                             <td><?php echo $oObjeto->getDescricao(); ?></td>
                             <td><?php echo $oObjeto->getSigla(); ?></td>
-                            <td><?php echo $oObjeto->getDataCadastro(); ?></td>
                             <td><?php echo $oObjeto->getUsuarioResponsavel()->getApelido(); ?></td>
                             <td>Alterar | Excluir </td>
                         </tr>

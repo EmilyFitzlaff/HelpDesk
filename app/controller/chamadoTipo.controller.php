@@ -49,16 +49,21 @@
         
                     if (!$conexao->getSelect($SQL)){
                         throw new PDOException();
+                        echo "entrou aquiii";
                     }
         
-                   ?><br>
+                    ?>
+                    <br>
                     <div class="alert alert-success" role="alert">
                         <span>Registro excluído com sucesso!</span>
                     </div>
+                    
                     <?php
+
                     exit;
                    
                 } catch(PDOException $erro) {
+                    var_dump($erro);
                     ?>
                     <br>
                     <div class="alert alert-danger" role="alert">
