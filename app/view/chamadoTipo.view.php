@@ -48,7 +48,7 @@
                             <td><?php echo $oObjeto->getId(); ?></td>
                             <td><?php echo $oObjeto->getDescricao(); ?></td>
                             <td><?php echo $oObjeto->getObservacao(); ?></td>
-                            <td>Alterar | <a href="chamadoTipo-exclusao.view.php?acao=deletar&registro=<?php echo $oObjeto->getId()?>">Excluir</a> </td>
+                            <td><a href="chamadoTipo-alterar.view.php?acao=alterar&registro=<?php echo $oObjeto->getId()?>">Alterar</a> | <a href="chamadoTipo-exclusao.view.php?acao=deletar&registro=<?php echo $oObjeto->getId()?>">Excluir</a> </td>
                         </tr>
                         <?php } ?>
                     </tbody>
