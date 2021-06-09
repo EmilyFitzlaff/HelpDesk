@@ -31,6 +31,12 @@
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_NUM);
         }
+
+        public function returnSQL($sql) {
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute($sql);
+            return $stmt;
+        }
     }
 
 ?>

@@ -38,8 +38,11 @@
         }
 
         public function MontaSelectUsuario() {
-            $aDados = $this->returnSelectAll();
-            var_dump($aDados);
+            $conexao = new Conexao();            
+            $SQL = "select * from usuario";            
+            $dadosBD = $conexao->getSelect($SQL);
+
+        
         }
     }
 ?>
