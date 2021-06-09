@@ -43,8 +43,8 @@ CREATE TABLE IF NOT EXISTS `helpdesk`.`usuario` (
   `dataCadastro` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
   `privilegio` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `apelido_UNIQUE` (`apelido` ASC) VISIBLE,
-  INDEX `privilegio_id_idx` (`privilegio` ASC) VISIBLE,
+  UNIQUE INDEX `apelido_UNIQUE` (`apelido` ASC) ,
+  INDEX `privilegio_id_idx` (`privilegio` ASC) ,
   CONSTRAINT `privilegio_id`
     FOREIGN KEY (`privilegio`)
     REFERENCES `helpdesk`.`usuarioprivilegio` (`id`)
@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `helpdesk`.`modulo` (
   `sigla` CHAR(3) NOT NULL,
   `responsavel` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `modulo_responsavel_id_idx` (`responsavel` ASC) VISIBLE,
+  INDEX `modulo_responsavel_id_idx` (`responsavel` ASC) ,
   CONSTRAINT `modulo_responsavel_id`
     FOREIGN KEY (`responsavel`)
     REFERENCES `helpdesk`.`usuario` (`id`)
@@ -88,9 +88,9 @@ CREATE TABLE IF NOT EXISTS `helpdesk`.`chamado` (
   `responsavel` INT(11) NOT NULL,
   `modulo` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `chamado_modulo_id_idx` (`modulo` ASC) VISIBLE,
-  INDEX `chamado_usuario_id_idx` (`usuario` ASC) VISIBLE,
-  INDEX `chamado_responsavel_id_idx` (`responsavel` ASC) VISIBLE,
+  INDEX `chamado_modulo_id_idx` (`modulo` ASC) ,
+  INDEX `chamado_usuario_id_idx` (`usuario` ASC) ,
+  INDEX `chamado_responsavel_id_idx` (`responsavel` ASC) ,
   CONSTRAINT `chamado_modulo_id`
     FOREIGN KEY (`modulo`)
     REFERENCES `helpdesk`.`modulo` (`id`)
@@ -134,9 +134,9 @@ CREATE TABLE IF NOT EXISTS `helpdesk`.`chamadotramite` (
   `data` DATETIME NOT NULL,
   `destinatario` INT(11) NOT NULL,
   PRIMARY KEY (`id`, `chamado`),
-  INDEX `usuario_id_idx` (`usuario` ASC) VISIBLE,
-  INDEX `chamadotramite_destinatario_id_idx` (`destinatario` ASC) VISIBLE,
-  INDEX `chamadotramite_chamado_id_idx` (`chamado` ASC) VISIBLE,
+  INDEX `usuario_id_idx` (`usuario` ASC) ,
+  INDEX `chamadotramite_destinatario_id_idx` (`destinatario` ASC) ,
+  INDEX `chamadotramite_chamado_id_idx` (`chamado` ASC) ,
   CONSTRAINT `chamadotramite_chamado_id`
     FOREIGN KEY (`chamado`)
     REFERENCES `helpdesk`.`chamado` (`id`)
